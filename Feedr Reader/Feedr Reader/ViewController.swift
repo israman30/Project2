@@ -12,6 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let url = URL(string:"https://newsapi.org/v1/articles?source=techcrunch&apiKey=066d82458ed84eeeac28a86095ec88b9")!
+        let json = URLSession.shared.dataTask(with: url){data, response, error in guard let data = data, error == nil else{return}
+            DispatchQueue.main.sync() {
+    
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
