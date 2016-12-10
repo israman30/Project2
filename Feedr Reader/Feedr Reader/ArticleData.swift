@@ -9,14 +9,14 @@
 import Foundation
 
 class Articles {
-    var author: [String]?
-    var title: [String]?
-    var description: [String]?
+    var author: String?
+    var title: String?
+    var description: String?
     init(article: [String : Any]) {
     
-        author = article["author"] as? [String]
-        title = article["title"] as? [String]
-        description = article["description"] as? [String]
+        author = article["author"] as? String
+        title = article["title"] as? String
+        description = article["description"] as? String
     }
 
 }
@@ -34,9 +34,11 @@ class NewsApiResponse {
         
         articles = []
     
+    
         if let articlesJson = json["articles"] as? [[String : Any]] {
             for articleJason in articlesJson {
                 articles?.append(Articles(article: articleJason))
+                
             }
         }
         
