@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var articlesJson = [Articles]()
     
     @IBOutlet weak var dataTableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +84,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.parseJson(data: respnseData, completionHandler: closure)
         }
         task.resume()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let safariVC = SFSafariViewController(url: URL(string: articlesJson[indexPath.row].url!)!)
+        present(safariVC, animated: true, completion: nil)
+        
     }
 }
 

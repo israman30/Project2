@@ -10,14 +10,18 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    var urlString: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        webView.loadRequest(URLRequest(url: URL(string: urlString)!))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
     }
-
+    
 }

@@ -38,7 +38,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="bPy-ub-Dgn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -50,7 +50,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descirption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjS-fj-1ta">
                                                     <rect key="frame" x="180" y="66" width="180" height="64"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -60,7 +60,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="ip1-ud-JYT"/>
                                                         <constraint firstAttribute="width" constant="134" id="uUf-CO-ybE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -85,7 +85,6 @@
                                             <outlet property="descriptionLabel" destination="vjS-fj-1ta" id="SqW-jh-Sxa"/>
                                             <outlet property="newsImage" destination="aqx-i7-IXK" id="4g4-PY-9O4"/>
                                             <outlet property="newsLabel" destination="wil-fY-NLl" id="Wav-we-SvX"/>
-                                            <segue destination="jl1-k7-Tdw" kind="show" id="vEX-so-HQN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -164,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUh-MR-KvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="863"/>
+            <point key="canvasLocation" x="438" y="1084"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qf9-dL-qbx">
@@ -191,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNV-Fw-ZLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="815"/>
+            <point key="canvasLocation" x="1190" y="1084"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bob-Cz-wUz">
@@ -218,12 +217,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wF-z7-uwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2511" y="815"/>
+            <point key="canvasLocation" x="1921" y="1084"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="mHI-Ug-fxr">
             <objects>
-                <viewController id="jl1-k7-Tdw" customClass="DescriptionViewController" customModule="Feedr_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DescriptionViewController" id="jl1-k7-Tdw" customClass="DescriptionViewController" customModule="Feedr_Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YQ6-Mx-ISK"/>
                         <viewControllerLayoutGuide type="bottom" id="kM9-aR-I1n"/>
@@ -242,6 +241,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-7E-PMu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jl1-k7-Tdw" id="rfN-ml-XYN"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -252,10 +254,13 @@
                             <constraint firstItem="sr1-7E-PMu" firstAttribute="top" secondItem="YQ6-Mx-ISK" secondAttribute="bottom" id="kLn-Tb-kNq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="sr1-7E-PMu" id="SdA-YZ-ZhW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgf-TG-Zp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="130.88455772113943"/>
+            <point key="canvasLocation" x="2102" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="51o-py-gea">
@@ -273,7 +278,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqy-Qv-Id5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="14" y="131"/>
         </scene>
     </scenes>
 </document>
