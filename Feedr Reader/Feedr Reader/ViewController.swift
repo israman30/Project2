@@ -17,18 +17,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        fetchData(closure: {rawData in
-            self.articlesJson = rawData as [Articles]
+        dataTableView.delegate = self
+        dataTableView.dataSource = self
+        dataTableView.reloadData()
+        
+        
+        fetchData(closure: {arrayArticles in
+            self.articlesJson = arrayArticles!
+            self.dataTableView.reloadData()
         })
         
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        dataTableView.reloadData()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,49 +38,84 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articlesJson.count
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for:indexPath) as! NewsTableViewCell
-            print(articlesJson)
         cell.authorLabel.text = articlesJson[indexPath.row].author
         cell.descriptionLabel.text = articlesJson[indexPath.row].description
+        cell.newsLabel.text = articlesJson[indexPath.row].title
+        let thisArticle = articlesJson[indexPath.row]
+        cell.updateCell(cellData: thisArticle)
+//        URLSession.shared.dataTask(with: articlesJson[indexPath.row].imageURL, completionHandler: { rawData, response, error in
+//            cell.newsImage.image = UIImage(data: rawData)
+//        })
         return cell
     }
 
     
-    func fetchData(closure: @escaping ([Articles])->()){
-        
-        let urlString = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=066d82458ed84eeeac28a86095ec88b9"
-        
-        let urlRequest = URL(string: urlString)!
-        
-        let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
-            if error != nil { print(error.debugDescription) }
-            else {
-                
-                guard let rawData = rawData else { print("There is no data") ; return }
-                
-                guard let data = try? JSONSerialization.jsonObject(with: rawData, options: .mutableContainers) as? [String : Any]
-                    
-                    else { print("There is no data") ; return  }
-                
-               // data need  to extracted step by step in the json serialization
-                let dataJson = data?["articles"] as! [[String : Any]]
-                
-                var articlesJson: [Articles] = []
-                
-                for newArticles in dataJson {
-                    let articles = Articles(data: newArticles)
-                    articlesJson.append(articles)
-                }
-               
-                DispatchQueue.main.async {
-//                    self.spinner.stopAnimating()
-                }
+    
+    func parseJson(data: Data, completionHandler: @escaping ([Articles]?) -> ()) {
+        var newArticles : [Articles] = []
+        if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {
+//            myArticles = Articles(data: jsonObject)
+            
+            let realArticlesJson = jsonObject["articles"] as! [[String : Any]]
+            for newArticle in realArticlesJson {
+                let articles = Articles(data: newArticle)
+                newArticles.append(articles)
+            }
+            DispatchQueue.main.async {
+                completionHandler(newArticles)
             }
         }
+    }
+    
+    
+    
+    
+    func fetchData(closure: @escaping ([Articles]?)->()){
+
+        let urlString = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=066d82458ed84eeeac28a86095ec88b9"
+        let urlRequest = URL(string: urlString)!
+        let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
+//            if error != nil { print(error.debugDescription) }
+//            else {
+            guard let respnseData = rawData else {
+                closure(nil)
+                return
+            }
+//                
+//                guard let rawData = rawData else { print("There is no data") ; return }
+//               
+//                    guard let data = try? JSONSerialization.jsonObject(with: rawData, options: .mutableContainers) as? [String : Any]
+//                        
+//                        else { print("There is no data") ; return  }
+//    
+//                    let dataJson = data?["articles"] as! [[String : Any]]
+//                    for newArticles in dataJson {
+//                        let articles = Articles(data: newArticles)
+//                        self.articlesJson.append(articles)
+            
+            
+            self.parseJson(data: respnseData, completionHandler: closure)
+//                
+//                
+//               // Data need  to extracted step by step in the json serialization
+//                
+//                
+//                }
+//                
+//                closure(self.articlesJson)
+//                
+//                DispatchQueue.main.async {
+////                    self.spinner.stopAnimating()
+//                }
+//            }
+        }
         task.resume()
-        
-        
+//
+//        
     }
 }
 

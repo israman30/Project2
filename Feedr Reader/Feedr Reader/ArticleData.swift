@@ -12,12 +12,13 @@ class Articles {
     var author: String?
     var title: String?
     var description: String?
+    var imageURL: String?
     
     init(data: [String : Any]) {
-    
         author = data["author"] as? String ?? "unknown"
         title = data["title"] as? String ?? "unknown"
         description = data["description"] as? String ?? "unknown"
+        imageURL = data["urlToImage"] as? String ?? "unknown"
         print(description ?? "")
     }
 
