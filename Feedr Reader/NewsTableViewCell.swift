@@ -23,6 +23,7 @@ class NewsTableViewCell: UITableViewCell {
        
     }
     
+    // MARK: Image fetching
     func updateCell(cellData: Articles) {
         let url = URL(string: cellData.imageURL!)
         
