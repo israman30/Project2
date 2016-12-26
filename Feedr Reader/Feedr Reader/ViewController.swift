@@ -9,6 +9,12 @@
 import UIKit
 import SafariServices
 
+enum Language : String {
+    case English = "en"
+    case German = "de"
+    case French = "fr"
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var articlesJson = [Articles]()
@@ -20,15 +26,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         dataTableView.delegate = self
         dataTableView.dataSource = self
-        dataTableView.reloadData()
         
-        
-        fetchData(closure: {arrayArticles in
+        requestAndReloadTableView()
+    }
+    
+    func requestAndReloadTableView() {
+        articlesJson = []
+        self.dataTableView.reloadData()
+        fetchData(with:.French, closure: {arrayArticles in
             self.articlesJson = arrayArticles!
             self.dataTableView.reloadData()
         })
     }
     
+    @IBAction func topLeftButtonTouchUpInside(_ sender: Any) {
+        requestAndReloadTableView()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,9 +83,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: This function fetch the data
-    func fetchData(closure: @escaping ([Articles]?)->()){
+    func fetchData(with language : Language, closure: @escaping ([Articles]?)->()){
 
-        let urlString = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=066d82458ed84eeeac28a86095ec88b9"
+        let urlString = "https://newsapi.org/v1/articles?source=techcrunch&language=\(language.rawValue)&apiKey=066d82458ed84eeeac28a86095ec88b9"
         let urlRequest = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
 
