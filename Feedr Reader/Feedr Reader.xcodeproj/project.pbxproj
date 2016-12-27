@@ -16,12 +16,15 @@
 		8D977BBB1DF7BBED00CF14EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D977BBA1DF7BBED00CF14EF /* Assets.xcassets */; };
 		8D977BBE1DF7BBED00CF14EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D977BBC1DF7BBED00CF14EF /* LaunchScreen.storyboard */; };
 		8D977BC81DF8BA4E00CF14EF /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */; };
+		8DCFAF241E11E6CE004F352E /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */; };
+		8DCFAF261E11EAF8004F352E /* GoogleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */; };
+		8DCFAF281E11FA20004F352E /* DescriptionGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = ../NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionViewController.swift; path = ../DescriptionViewController.swift; sourceTree = "<group>"; };
-		8D36E5B71E0237B500446B75 /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		8D36E5B71E0237B500446B75 /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Articles.swift; path = ../Articles.swift; sourceTree = "<group>"; };
 		8D977BB01DF7BBED00CF14EF /* Feedr Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feedr Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D977BB31DF7BBED00CF14EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D977BB51DF7BBED00CF14EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		8D977BBD1DF7BBED00CF14EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D977BBF1DF7BBED00CF14EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
+		8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
+		8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTableViewCell.swift; sourceTree = "<group>"; };
+		8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionGoogleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +52,8 @@
 		8D0005D21DFAF1540086C7A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */,
 				8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */,
-				8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */,
+				8D36E5B71E0237B500446B75 /* Articles.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -58,6 +63,9 @@
 			children = (
 				8D977BB31DF7BBED00CF14EF /* AppDelegate.swift */,
 				8D977BB51DF7BBED00CF14EF /* ViewController.swift */,
+				8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */,
+				8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */,
+				8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -65,7 +73,6 @@
 		8D977BA71DF7BBED00CF14EF = {
 			isa = PBXGroup;
 			children = (
-				8D36E5B71E0237B500446B75 /* Articles.swift */,
 				8D977BB21DF7BBED00CF14EF /* Feedr Reader */,
 				8D977BB11DF7BBED00CF14EF /* Products */,
 			);
@@ -82,6 +89,7 @@
 		8D977BB21DF7BBED00CF14EF /* Feedr Reader */ = {
 			isa = PBXGroup;
 			children = (
+				8DCFAF291E120248004F352E /* Outlets */,
 				8D0005D31DFAF1670086C7A1 /* Logic */,
 				8D0005D21DFAF1540086C7A1 /* Data */,
 				8D977BB71DF7BBED00CF14EF /* Main.storyboard */,
@@ -90,6 +98,15 @@
 				8D977BBF1DF7BBED00CF14EF /* Info.plist */,
 			);
 			path = "Feedr Reader";
+			sourceTree = "<group>";
+		};
+		8DCFAF291E120248004F352E /* Outlets */ = {
+			isa = PBXGroup;
+			children = (
+				8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */,
+				8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */,
+			);
+			name = Outlets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +186,10 @@
 				8D977BC81DF8BA4E00CF14EF /* ArticleData.swift in Sources */,
 				8D0005D11DFAF1050086C7A1 /* NewsTableViewCell.swift in Sources */,
 				8D0005D51DFB19860086C7A1 /* DescriptionViewController.swift in Sources */,
+				8DCFAF261E11EAF8004F352E /* GoogleTableViewCell.swift in Sources */,
+				8DCFAF281E11FA20004F352E /* DescriptionGoogleViewController.swift in Sources */,
 				8D36E5B81E0237B500446B75 /* Articles.swift in Sources */,
+				8DCFAF241E11E6CE004F352E /* GoogleViewController.swift in Sources */,
 				8D977BB41DF7BBED00CF14EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
