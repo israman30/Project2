@@ -14,6 +14,7 @@ class Articles {
     var description: String?
     var url: String?
     var imageURL: String?
+    var publishedAt: String?
     
     init(data: [String : Any]) {
         author = data["author"] as? String ?? "unknown"
@@ -21,6 +22,7 @@ class Articles {
         description = data["description"] as? String ?? "unknown"
         url = data["url"] as? String ?? "unknown"
         imageURL = data["urlToImage"] as? String ?? "unknown"
+        publishedAt = data["publishedAt"] as? String ?? "unknown"
 
     }
 

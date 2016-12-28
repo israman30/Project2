@@ -39,9 +39,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-    @IBAction func topLeftButtonTouchUpInside(_ sender: Any) {
-        requestAndReloadTableView()
-    }
+//    @IBAction func topLeftButtonTouchUpInside(_ sender: Any) {
+//        requestAndReloadTableView()
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.authorLabel.text = articlesJson[indexPath.row].author
         cell.descriptionLabel.text = articlesJson[indexPath.row].description
         cell.newsLabel.text = articlesJson[indexPath.row].title
+        cell.newsPublishLabel.text = articlesJson[indexPath.row].publishedAt
         let thisArticle = articlesJson[indexPath.row]
         cell.updateCell(cellData: thisArticle)
 

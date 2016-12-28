@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aGt-VA-lDi" id="jG7-c8-OIg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wil-fY-NLl">
@@ -48,19 +48,29 @@
                                                         <constraint firstAttribute="width" constant="150" id="fdk-Mq-cZt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descirption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjS-fj-1ta">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjS-fj-1ta">
                                                     <rect key="frame" x="180" y="66" width="180" height="64"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p0-By-GDO">
+                                                    <rect key="frame" x="180" y="138" width="180" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5iO-LY-bFo"/>
+                                                        <constraint firstAttribute="width" constant="180" id="Ts0-Vs-WFn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-m8-3LP">
-                                                    <rect key="frame" x="226" y="133" width="134" height="21"/>
+                                                    <rect key="frame" x="180" y="123" width="180" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="ip1-ud-JYT"/>
-                                                        <constraint firstAttribute="width" constant="134" id="uUf-CO-ybE"/>
+                                                        <constraint firstAttribute="width" constant="180" id="uUf-CO-ybE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -70,13 +80,15 @@
                                                 <constraint firstItem="wil-fY-NLl" firstAttribute="top" secondItem="jG7-c8-OIg" secondAttribute="topMargin" id="6JL-y1-VV4"/>
                                                 <constraint firstItem="vjS-fj-1ta" firstAttribute="trailing" secondItem="hgR-m8-3LP" secondAttribute="trailing" id="9Ju-Sh-drQ"/>
                                                 <constraint firstItem="aqx-i7-IXK" firstAttribute="bottom" secondItem="jG7-c8-OIg" secondAttribute="bottomMargin" id="IaQ-JI-JIH"/>
+                                                <constraint firstItem="6p0-By-GDO" firstAttribute="leading" secondItem="hgR-m8-3LP" secondAttribute="leading" id="Ngt-tg-swA"/>
                                                 <constraint firstItem="vjS-fj-1ta" firstAttribute="top" secondItem="wil-fY-NLl" secondAttribute="bottom" constant="8" symbolic="YES" id="QPp-Xe-tGf"/>
                                                 <constraint firstItem="aqx-i7-IXK" firstAttribute="top" secondItem="jG7-c8-OIg" secondAttribute="topMargin" constant="-4" id="Y1Q-8Z-g5K"/>
                                                 <constraint firstItem="wil-fY-NLl" firstAttribute="trailing" secondItem="jG7-c8-OIg" secondAttribute="trailingMargin" id="b6d-q0-AmG"/>
-                                                <constraint firstItem="hgR-m8-3LP" firstAttribute="top" secondItem="vjS-fj-1ta" secondAttribute="bottom" constant="3" id="c3u-b8-lwV"/>
+                                                <constraint firstItem="6p0-By-GDO" firstAttribute="top" secondItem="vjS-fj-1ta" secondAttribute="bottom" constant="8" id="bQT-eV-ykt"/>
+                                                <constraint firstItem="hgR-m8-3LP" firstAttribute="top" secondItem="vjS-fj-1ta" secondAttribute="bottom" constant="-7" id="c3u-b8-lwV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vjS-fj-1ta" secondAttribute="trailing" constant="7" id="cLc-M7-Cpq"/>
                                                 <constraint firstItem="aqx-i7-IXK" firstAttribute="leading" secondItem="jG7-c8-OIg" secondAttribute="leadingMargin" id="mSV-Rz-dy7"/>
-                                                <constraint firstItem="aqx-i7-IXK" firstAttribute="bottom" secondItem="hgR-m8-3LP" secondAttribute="bottom" id="noo-nI-HRu"/>
+                                                <constraint firstItem="aqx-i7-IXK" firstAttribute="bottom" secondItem="hgR-m8-3LP" secondAttribute="bottom" constant="10" id="noo-nI-HRu"/>
                                                 <constraint firstItem="wil-fY-NLl" firstAttribute="leading" secondItem="aqx-i7-IXK" secondAttribute="trailing" constant="22" id="ts0-Zp-Geq"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -85,6 +97,7 @@
                                             <outlet property="descriptionLabel" destination="vjS-fj-1ta" id="SqW-jh-Sxa"/>
                                             <outlet property="newsImage" destination="aqx-i7-IXK" id="4g4-PY-9O4"/>
                                             <outlet property="newsLabel" destination="wil-fY-NLl" id="Wav-we-SvX"/>
+                                            <outlet property="newsPublishLabel" destination="6p0-By-GDO" id="9yF-GL-zf0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -247,7 +260,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="353"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ncZ-u6-BHe" id="sob-hy-PJV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="353"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvg-FG-cBb">
@@ -297,6 +310,8 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paF-5A-fl2">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Google News" id="1bx-2a-Rn1">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="g6b-gM-I4K">
@@ -314,10 +329,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-news" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-GL-r6w">
+                                <rect key="frame" x="135" y="22" width="105" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1eY-sv-YJJ"/>
+                                    <constraint firstAttribute="width" constant="105" id="DdJ-Qe-0zj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CjR-GL-r6w" firstAttribute="centerY" secondItem="zrd-5m-kE4" secondAttribute="centerY" constant="-291.5" id="1cy-nX-7na"/>
                             <constraint firstItem="DKJ-iY-dGp" firstAttribute="centerY" secondItem="zrd-5m-kE4" secondAttribute="centerY" constant="32" id="ax1-7j-WaU"/>
+                            <constraint firstItem="CjR-GL-r6w" firstAttribute="centerX" secondItem="zrd-5m-kE4" secondAttribute="centerX" id="m0o-O4-PqB"/>
                             <constraint firstItem="DKJ-iY-dGp" firstAttribute="centerX" secondItem="zrd-5m-kE4" secondAttribute="centerX" id="vDD-LA-0CX"/>
                         </constraints>
                     </view>
@@ -327,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wax-3X-rbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="885"/>
+            <point key="canvasLocation" x="1104.8" y="884.70764617691157"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="mHI-Ug-fxr">
@@ -392,7 +416,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqy-Qv-Id5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-425" y="179"/>
+            <point key="canvasLocation" x="-545" y="179"/>
         </scene>
         <!--Fox Sports View Controller-->
         <scene sceneID="jy6-hO-wjf">
@@ -525,11 +549,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXb-HE-cPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="885"/>
+            <point key="canvasLocation" x="334" y="843"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo_fox_sports" width="500" height="277"/>
+        <image name="google-news" width="275" height="110"/>
         <image name="google-now" width="640" height="400"/>
         <image name="google.button" width="768" height="768"/>
         <image name="stdium" width="780" height="440"/>
@@ -537,6 +562,6 @@
         <image name="whiteCrunch" width="550" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VS8-Lk-XW3"/>
+        <segue reference="rzf-Gl-MWp"/>
     </inferredMetricsTieBreakers>
 </document>

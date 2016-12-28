@@ -18,6 +18,8 @@ class NewsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var newsImage: UIImageView!
     
+    @IBOutlet weak var newsPublishLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        
