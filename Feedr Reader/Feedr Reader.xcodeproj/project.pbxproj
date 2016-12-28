@@ -10,6 +10,9 @@
 		8D0005D11DFAF1050086C7A1 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */; };
 		8D0005D51DFB19860086C7A1 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */; };
 		8D36E5B81E0237B500446B75 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36E5B71E0237B500446B75 /* Articles.swift */; };
+		8D8829C91E134AEA00BE640D /* FoxSportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */; };
+		8D8829CB1E134BB700BE640D /* FoxSportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829CA1E134BB700BE640D /* FoxSportsTableViewCell.swift */; };
+		8D8829CD1E134D4900BE640D /* FoxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829CC1E134D4900BE640D /* FoxData.swift */; };
 		8D977BB41DF7BBED00CF14EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977BB31DF7BBED00CF14EF /* AppDelegate.swift */; };
 		8D977BB61DF7BBED00CF14EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977BB51DF7BBED00CF14EF /* ViewController.swift */; };
 		8D977BB91DF7BBED00CF14EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D977BB71DF7BBED00CF14EF /* Main.storyboard */; };
@@ -18,13 +21,15 @@
 		8D977BC81DF8BA4E00CF14EF /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */; };
 		8DCFAF241E11E6CE004F352E /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */; };
 		8DCFAF261E11EAF8004F352E /* GoogleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */; };
-		8DCFAF281E11FA20004F352E /* DescriptionGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = ../NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionViewController.swift; path = ../DescriptionViewController.swift; sourceTree = "<group>"; };
 		8D36E5B71E0237B500446B75 /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Articles.swift; path = ../Articles.swift; sourceTree = "<group>"; };
+		8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxSportsViewController.swift; path = ../FoxSportsViewController.swift; sourceTree = "<group>"; };
+		8D8829CA1E134BB700BE640D /* FoxSportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxSportsTableViewCell.swift; path = ../FoxSportsTableViewCell.swift; sourceTree = "<group>"; };
+		8D8829CC1E134D4900BE640D /* FoxData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxData.swift; path = ../FoxData.swift; sourceTree = "<group>"; };
 		8D977BB01DF7BBED00CF14EF /* Feedr Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feedr Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D977BB31DF7BBED00CF14EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D977BB51DF7BBED00CF14EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
 		8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTableViewCell.swift; sourceTree = "<group>"; };
-		8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionGoogleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		8D0005D21DFAF1540086C7A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8D8829CC1E134D4900BE640D /* FoxData.swift */,
 				8D977BC71DF8BA4E00CF14EF /* ArticleData.swift */,
 				8D36E5B71E0237B500446B75 /* Articles.swift */,
 			);
@@ -64,8 +69,8 @@
 				8D977BB31DF7BBED00CF14EF /* AppDelegate.swift */,
 				8D977BB51DF7BBED00CF14EF /* ViewController.swift */,
 				8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */,
+				8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */,
 				8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */,
-				8DCFAF271E11FA20004F352E /* DescriptionGoogleViewController.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			children = (
 				8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */,
 				8DCFAF251E11EAF8004F352E /* GoogleTableViewCell.swift */,
+				8D8829CA1E134BB700BE640D /* FoxSportsTableViewCell.swift */,
 			);
 			name = Outlets;
 			sourceTree = "<group>";
@@ -136,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Israel Manzo";
 				TargetAttributes = {
 					8D977BAF1DF7BBED00CF14EF = {
@@ -187,10 +193,12 @@
 				8D0005D11DFAF1050086C7A1 /* NewsTableViewCell.swift in Sources */,
 				8D0005D51DFB19860086C7A1 /* DescriptionViewController.swift in Sources */,
 				8DCFAF261E11EAF8004F352E /* GoogleTableViewCell.swift in Sources */,
-				8DCFAF281E11FA20004F352E /* DescriptionGoogleViewController.swift in Sources */,
+				8D8829CB1E134BB700BE640D /* FoxSportsTableViewCell.swift in Sources */,
+				8D8829C91E134AEA00BE640D /* FoxSportsViewController.swift in Sources */,
 				8D36E5B81E0237B500446B75 /* Articles.swift in Sources */,
 				8DCFAF241E11E6CE004F352E /* GoogleViewController.swift in Sources */,
 				8D977BB41DF7BBED00CF14EF /* AppDelegate.swift in Sources */,
+				8D8829CD1E134D4900BE640D /* FoxData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +242,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -284,6 +293,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

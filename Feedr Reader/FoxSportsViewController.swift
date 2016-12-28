@@ -1,22 +1,22 @@
 //
-//  GoogleViewController.swift
+//  FoxSportsViewController.swift
 //  Feedr Reader
 //
-//  Created by Israel Manzo on 12/26/16.
+//  Created by Israel Manzo on 12/27/16.
 //  Copyright © 2016 Israel Manzo. All rights reserved.
 //
 
 import UIKit
 import SafariServices
 
-class GoogleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var foxArticles = [FoxArticles]()
+    
     @IBOutlet weak var tableView: UITableView!
-    
-    var googlesArticle = [GoogleArticles]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -25,23 +25,26 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func requestAndReloadTableView() {
-        googlesArticle = []
+        foxArticles = []
         self.tableView.reloadData()
         fetchData(with:.French, closure: {arrayArticles in
-            self.googlesArticle = arrayArticles!
+            self.foxArticles = arrayArticles!
             self.tableView.reloadData()
+            
         })
+        
     }
 
     
-    func parseJson(data: Data, completionHandler: @escaping ([GoogleArticles]?) -> ()) {
-        var newArticles : [GoogleArticles] = []
+    func parseJson(data: Data, completionHandler: @escaping ([FoxArticles]?) -> ()) {
+        var newArticles : [FoxArticles] = []
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {
             
             let realArticlesJson = jsonObject["articles"] as! [[String : Any]]
             for newArticle in realArticlesJson {
-                let articles = GoogleArticles(data: newArticle)
+                let articles = FoxArticles(data: newArticle)
                 newArticles.append(articles)
+                
             }
             DispatchQueue.main.async {
                 completionHandler(newArticles)
@@ -49,9 +52,9 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func fetchData(with language : Language, closure: @escaping ([GoogleArticles]?)->()){
+    func fetchData(with language : Language, closure: @escaping ([FoxArticles]?)->()){
         
-        let urlString = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=066d82458ed84eeeac28a86095ec88b9"
+        let urlString = "https://newsapi.org/v1/articles?source=fox-sports&sortBy=top&apiKey=066d82458ed84eeeac28a86095ec88b9"
         let urlRequest = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: urlRequest) { rawData, response, error in
             
@@ -65,29 +68,29 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
 
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return googlesArticle.count
+        return foxArticles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GoogleCell", for: indexPath) as! GoogleTableViewCell
-        cell.googleAuthor.text = googlesArticle[indexPath.row].author
-        cell.googleTitle.text = googlesArticle[indexPath.row].title
-        cell.googleDescription.text = googlesArticle[indexPath.row].description
-        cell.googlePublish.text = googlesArticle[indexPath.row].publishedAt
-        let googlePic = googlesArticle[indexPath.row]
-        cell.updateCell(cellData: googlePic)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellFox", for: indexPath) as! FoxSportsTableViewCell
+        
+        cell.authorFoxLbl.text = foxArticles[indexPath.row].author
+        cell.publishedFoxLbl.text = foxArticles[indexPath.row].publishedAt
+        cell.descriptionFoxLbl.text = foxArticles[indexPath.row].description
+        cell.titleFoxLbl.text = foxArticles[indexPath.row].title
+        let foxPic = foxArticles[indexPath.row]
+        cell.updateCell(cellData: foxPic)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let safariVC = SFSafariViewController(url: URL(string: googlesArticle[indexPath.row].url!)!)
+        let safariVC = SFSafariViewController(url: URL(string: foxArticles[indexPath.row].url!)!)
         present(safariVC, animated: true, completion: nil)
         
     }
-
 
 }

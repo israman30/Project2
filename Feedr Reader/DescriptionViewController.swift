@@ -13,10 +13,14 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     
     var urlString: String!
+    var urlGoogleString: String!
+    var urlFoxString: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.loadRequest(URLRequest(url: URL(string: urlString)!))
+        webView.loadRequest(URLRequest(url: URL(string: urlGoogleString)!))
+        webView.loadRequest(URLRequest(url: URL(string: urlFoxString)!))
     }
 
     override func didReceiveMemoryWarning() {
