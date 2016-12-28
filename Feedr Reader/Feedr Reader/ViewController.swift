@@ -56,11 +56,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for:indexPath) as! NewsTableViewCell
-        cell.authorLabel.text = articlesJson[indexPath.row].author
-        cell.descriptionLabel.text = articlesJson[indexPath.row].description
-        cell.newsLabel.text = articlesJson[indexPath.row].title
-        cell.newsPublishLabel.text = articlesJson[indexPath.row].publishedAt
-        let thisArticle = articlesJson[indexPath.row]
+        
+        let displayTC = articlesJson[indexPath.row]
+        
+        cell.authorLabel.text = displayTC.author
+        cell.descriptionLabel.text = displayTC.description
+        cell.newsLabel.text = displayTC.title
+        cell.newsPublishLabel.text = displayTC.publishedAt
+        let thisArticle = displayTC
         cell.updateCell(cellData: thisArticle)
 
         return cell
