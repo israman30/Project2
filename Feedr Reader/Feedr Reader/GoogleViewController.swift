@@ -30,6 +30,7 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
             self.googlesArticle = arrayArticles!
             self.tableView.reloadData()
         })
+        
     }
 
     func parseJson(data: Data, completionHandler: @escaping ([GoogleArticles]?) -> ()) {
@@ -95,5 +96,4 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         let svc = SFSafariViewController(url: NSURL(string: self.urlString)! as URL)
         self.present(svc, animated: true, completion: nil)
     }
-    
 }

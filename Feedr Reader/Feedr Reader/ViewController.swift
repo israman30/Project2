@@ -107,5 +107,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         present(safariVC, animated: true, completion: nil)
         
     }
+    
 }
 
