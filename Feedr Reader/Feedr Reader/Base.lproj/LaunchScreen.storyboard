@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,14 +32,26 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by newsapi.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-dl-lQa">
+                                <rect key="frame" x="80" y="437" width="214" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="OyG-y3-QJZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="bfb-rd-HnR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VCm-fT-v99" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-129" id="3Jq-Nl-HoC"/>
                             <constraint firstItem="e6K-rA-GbW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4sS-lv-L15"/>
+                            <constraint firstItem="sS5-dl-lQa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="114" id="52D-AU-Z9Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e6K-rA-GbW" secondAttribute="trailing" constant="87" id="9p4-ZW-7tB"/>
                             <constraint firstItem="VCm-fT-v99" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="HaF-2w-tp8"/>
                             <constraint firstItem="e6K-rA-GbW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hmg-yZ-HuO"/>
+                            <constraint firstItem="sS5-dl-lQa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="T2U-FI-0gJ"/>
                             <constraint firstItem="e6K-rA-GbW" firstAttribute="top" secondItem="VCm-fT-v99" secondAttribute="bottom" constant="8" id="bpv-us-Bff"/>
                             <constraint firstItem="VCm-fT-v99" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="dTU-BO-rnS"/>
                             <constraint firstItem="e6K-rA-GbW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="87" id="gsc-ya-ZIp"/>

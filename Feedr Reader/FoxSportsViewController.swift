@@ -30,12 +30,9 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
         fetchData(with:.French, closure: {arrayArticles in
             self.foxArticles = arrayArticles!
             self.tableView.reloadData()
-            
         })
-        
     }
 
-    
     func parseJson(data: Data, completionHandler: @escaping ([FoxArticles]?) -> ()) {
         var newArticles : [FoxArticles] = []
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {
@@ -67,8 +64,6 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         task.resume()
     }
-
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foxArticles.count
@@ -77,12 +72,15 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellFox", for: indexPath) as! FoxSportsTableViewCell
         
-        cell.authorFoxLbl.text = foxArticles[indexPath.row].author
-        cell.publishedFoxLbl.text = foxArticles[indexPath.row].publishedAt
-        cell.descriptionFoxLbl.text = foxArticles[indexPath.row].description
-        cell.titleFoxLbl.text = foxArticles[indexPath.row].title
-        let foxPic = foxArticles[indexPath.row]
+        let displayFS = foxArticles[indexPath.row]
+        
+        cell.authorFoxLbl.text = displayFS.author
+        cell.publishedFoxLbl.text = displayFS.publishedAt
+        cell.descriptionFoxLbl.text = displayFS.description
+        cell.titleFoxLbl.text = displayFS.title
+        let foxPic = displayFS
         cell.updateCell(cellData: foxPic)
+//        cell.backgroundColor = UIColor.lightGray
         
         return cell
     }
@@ -90,7 +88,5 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let safariVC = SFSafariViewController(url: URL(string: foxArticles[indexPath.row].url!)!)
         present(safariVC, animated: true, completion: nil)
-        
     }
-
 }

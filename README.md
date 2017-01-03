@@ -6,11 +6,14 @@ This is a collection of Views that displays the news reader on each cell and in 
 ##Launch Story Board
 ![Screenshot](images/launchScreen.png)
 
-##General View
-![Screenshot](images/generalView.png)
+##Main View
+![Screenshot](images/Main.png)
 
-##Table View Description
-![Screenshot](images/tableView-description.png)
+##First View 
+![Screenshot](images/Tc.png)
 
-##Three Table Views that shows three single displays
-![Screenshot](images/threeviews.png)
+##Second View 
+![Screenshot](images/Fs.png)
+
+##Third View
+![Screenshot](images/Google.png)

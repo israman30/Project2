@@ -53,7 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return articlesJson.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for:indexPath) as! NewsTableViewCell
         
@@ -65,12 +64,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.newsPublishLabel.text = displayTC.publishedAt
         let thisArticle = displayTC
         cell.updateCell(cellData: thisArticle)
+//        cell.backgroundColor = UIColor.lightGray
 
         return cell
     }
 
     // MARK: Serialization data function
-    
     func parseJson(data: Data, completionHandler: @escaping ([Articles]?) -> ()) {
         var newArticles : [Articles] = []
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {

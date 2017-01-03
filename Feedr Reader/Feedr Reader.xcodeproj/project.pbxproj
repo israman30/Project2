@@ -10,6 +10,7 @@
 		8D0005D11DFAF1050086C7A1 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */; };
 		8D0005D51DFB19860086C7A1 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */; };
 		8D36E5B81E0237B500446B75 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D36E5B71E0237B500446B75 /* Articles.swift */; };
+		8D682B981E157A7D003225AF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D682B971E157A7D003225AF /* SearchViewController.swift */; };
 		8D8829C91E134AEA00BE640D /* FoxSportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */; };
 		8D8829CB1E134BB700BE640D /* FoxSportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829CA1E134BB700BE640D /* FoxSportsTableViewCell.swift */; };
 		8D8829CD1E134D4900BE640D /* FoxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8829CC1E134D4900BE640D /* FoxData.swift */; };
@@ -27,6 +28,7 @@
 		8D0005D01DFAF1050086C7A1 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = ../NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionViewController.swift; path = ../DescriptionViewController.swift; sourceTree = "<group>"; };
 		8D36E5B71E0237B500446B75 /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Articles.swift; path = ../Articles.swift; sourceTree = "<group>"; };
+		8D682B971E157A7D003225AF /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxSportsViewController.swift; path = ../FoxSportsViewController.swift; sourceTree = "<group>"; };
 		8D8829CA1E134BB700BE640D /* FoxSportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxSportsTableViewCell.swift; path = ../FoxSportsTableViewCell.swift; sourceTree = "<group>"; };
 		8D8829CC1E134D4900BE640D /* FoxData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoxData.swift; path = ../FoxData.swift; sourceTree = "<group>"; };
@@ -71,8 +73,19 @@
 				8DCFAF231E11E6CE004F352E /* GoogleViewController.swift */,
 				8D8829C81E134AEA00BE640D /* FoxSportsViewController.swift */,
 				8D0005D41DFB19860086C7A1 /* DescriptionViewController.swift */,
+				8D682B971E157A7D003225AF /* SearchViewController.swift */,
 			);
 			name = Logic;
+			sourceTree = "<group>";
+		};
+		8D682B991E1AFDFD003225AF /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				8D977BB71DF7BBED00CF14EF /* Main.storyboard */,
+				8D977BBA1DF7BBED00CF14EF /* Assets.xcassets */,
+				8D977BBC1DF7BBED00CF14EF /* LaunchScreen.storyboard */,
+			);
+			name = UIs;
 			sourceTree = "<group>";
 		};
 		8D977BA71DF7BBED00CF14EF = {
@@ -94,12 +107,10 @@
 		8D977BB21DF7BBED00CF14EF /* Feedr Reader */ = {
 			isa = PBXGroup;
 			children = (
+				8D682B991E1AFDFD003225AF /* UIs */,
 				8DCFAF291E120248004F352E /* Outlets */,
 				8D0005D31DFAF1670086C7A1 /* Logic */,
 				8D0005D21DFAF1540086C7A1 /* Data */,
-				8D977BB71DF7BBED00CF14EF /* Main.storyboard */,
-				8D977BBA1DF7BBED00CF14EF /* Assets.xcassets */,
-				8D977BBC1DF7BBED00CF14EF /* LaunchScreen.storyboard */,
 				8D977BBF1DF7BBED00CF14EF /* Info.plist */,
 			);
 			path = "Feedr Reader";
@@ -194,6 +205,7 @@
 				8D0005D51DFB19860086C7A1 /* DescriptionViewController.swift in Sources */,
 				8DCFAF261E11EAF8004F352E /* GoogleTableViewCell.swift in Sources */,
 				8D8829CB1E134BB700BE640D /* FoxSportsTableViewCell.swift in Sources */,
+				8D682B981E157A7D003225AF /* SearchViewController.swift in Sources */,
 				8D8829C91E134AEA00BE640D /* FoxSportsViewController.swift in Sources */,
 				8D36E5B81E0237B500446B75 /* Articles.swift in Sources */,
 				8DCFAF241E11E6CE004F352E /* GoogleViewController.swift in Sources */,

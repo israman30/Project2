@@ -21,19 +21,17 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         
         requestAndReloadTableView()
-
     }
     
     func requestAndReloadTableView() {
         googlesArticle = []
         self.tableView.reloadData()
-        fetchData(with:.French, closure: {arrayArticles in
+        fetchData(with: {arrayArticles in
             self.googlesArticle = arrayArticles!
             self.tableView.reloadData()
         })
     }
 
-    
     func parseJson(data: Data, completionHandler: @escaping ([GoogleArticles]?) -> ()) {
         var newArticles : [GoogleArticles] = []
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {
@@ -49,7 +47,7 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func fetchData(with language : Language, closure: @escaping ([GoogleArticles]?)->()){
+    func fetchData(with closure: @escaping ([GoogleArticles]?)->()){
         
         let urlString = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=066d82458ed84eeeac28a86095ec88b9"
         let urlRequest = URL(string: urlString)!
@@ -65,20 +63,22 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
 
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return googlesArticle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GoogleCell", for: indexPath) as! GoogleTableViewCell
-        cell.googleAuthor.text = googlesArticle[indexPath.row].author
-        cell.googleTitle.text = googlesArticle[indexPath.row].title
-        cell.googleDescription.text = googlesArticle[indexPath.row].description
-        cell.googlePublish.text = googlesArticle[indexPath.row].publishedAt
-        let googlePic = googlesArticle[indexPath.row]
+        
+        let displayGoogle = googlesArticle[indexPath.row]
+        
+        cell.googleAuthor.text = displayGoogle.author
+        cell.googleTitle.text = displayGoogle.title
+        cell.googleDescription.text = displayGoogle.description
+        cell.googlePublish.text = displayGoogle.publishedAt
+        let googlePic = displayGoogle
         cell.updateCell(cellData: googlePic)
+//        cell.backgroundColor = UIColor.lightGray
         
         return cell
     }
@@ -86,8 +86,14 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let safariVC = SFSafariViewController(url: URL(string: googlesArticle[indexPath.row].url!)!)
         present(safariVC, animated: true, completion: nil)
-        
     }
-
-
+    
+    var urlString:String = "https://google.com"
+    
+    @IBAction func googleSearch(_ sender: Any) {
+        
+        let svc = SFSafariViewController(url: NSURL(string: self.urlString)! as URL)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
 }

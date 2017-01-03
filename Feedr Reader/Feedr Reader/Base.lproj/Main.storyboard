@@ -61,7 +61,7 @@
                                                         <constraint firstAttribute="width" constant="180" id="Ts0-Vs-WFn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-m8-3LP">
@@ -71,7 +71,7 @@
                                                         <constraint firstAttribute="width" constant="180" id="uUf-CO-ybE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -239,7 +239,7 @@
         <!--Google View Controller-->
         <scene sceneID="t5S-b5-ZpJ">
             <objects>
-                <viewController id="x39-Qw-DAb" customClass="GoogleViewController" customModule="Feedr_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoogleViewController" id="x39-Qw-DAb" customClass="GoogleViewController" customModule="Feedr_Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NY7-Jq-Q8v"/>
                         <viewControllerLayoutGuide type="bottom" id="yfg-vT-TB4"/>
@@ -297,6 +297,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="googleAuthor" destination="xVD-c0-XWE" id="ASg-Dz-DIY"/>
                                             <outlet property="googleDescription" destination="3ne-y3-YQR" id="P5l-yp-NpK"/>
@@ -326,6 +327,11 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="5dX-AC-5zN">
+                                            <connections>
+                                                <action selector="googleSearch:" destination="x39-Qw-DAb" id="FHW-uI-UjD"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -338,6 +344,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CjR-GL-r6w" firstAttribute="centerY" secondItem="zrd-5m-kE4" secondAttribute="centerY" constant="-291.5" id="1cy-nX-7na"/>
                             <constraint firstItem="DKJ-iY-dGp" firstAttribute="centerY" secondItem="zrd-5m-kE4" secondAttribute="centerY" constant="32" id="ax1-7j-WaU"/>
@@ -438,7 +445,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FSl-vX-04n" id="5Uv-bN-vpf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-7x-fbi">
@@ -549,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXb-HE-cPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="843"/>
+            <point key="canvasLocation" x="334" y="885"/>
         </scene>
     </scenes>
     <resources>
@@ -562,6 +569,6 @@
         <image name="whiteCrunch" width="550" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rzf-Gl-MWp"/>
+        <segue reference="lOn-CK-0Hd"/>
     </inferredMetricsTieBreakers>
 </document>
