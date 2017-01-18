@@ -158,7 +158,7 @@
 				TargetAttributes = {
 					8D977BAF1DF7BBED00CF14EF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6DC9LP75VX;
+						DevelopmentTeam = G9TBJCK73T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -335,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = "Feedr Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.inclass.Feedr-Reader";
@@ -348,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6DC9LP75VX;
+				DEVELOPMENT_TEAM = G9TBJCK73T;
 				INFOPLIST_FILE = "Feedr Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.inclass.Feedr-Reader";
