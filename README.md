@@ -2,7 +2,7 @@
 # Feedr Reader App
 #### by
 ### *Israel Manzo*
-###### *Powered by newsapi.org*
+
 
 This is a collection of News soures that displays the news readers on each cell and in a single view. 
 
@@ -23,3 +23,4 @@ This is a collection of News soures that displays the news readers on each cell 
 
 ## Detail View 
 ![Screenshot](images/DetailSS.png)
+###### *Powered by newsapi.org*
