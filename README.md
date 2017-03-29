@@ -1,19 +1,19 @@
-#Project 2
-#Feedr Reader App
+# Project 2
+# Feedr Reader App
 
 This is a collection of Views that displays the news reader on each cell and in a single view
 
-##Launch Story Board
+## Launch Story Board
 ![Screenshot](images/launchScreen.png)
 
-##Main View
+## Main View
 ![Screenshot](images/Main.png)
 
-##First View 
+## First View 
 ![Screenshot](images/Tc.png)
 
-##Second View 
+## Second View 
 ![Screenshot](images/Fs.png)
 
-##Third View
+## Third View
 ![Screenshot](images/Google.png)
