@@ -1,19 +1,24 @@
-# Project 2
-# Feedr Reader App
 
-This is a collection of Views that displays the news reader on each cell and in a single view
+# Feedr Reader App
+#### by
+### *Israel Manzo*
+
+This is a collection of News soures that displays the news readers on each cell and in a single view. 
 
 ## Launch Story Board
 ![Screenshot](images/launchScreen.png)
 
-## Main View
-![Screenshot](images/Main.png)
+## Menu View
+![Screenshot](images/MainSS.png)
 
-## First View 
-![Screenshot](images/Tc.png)
+## TechCrunch News View 
+![Screenshot](images/TCSS.png)
 
-## Second View 
-![Screenshot](images/Fs.png)
+## Fox Sport View 
+![Screenshot](images/FoxS.png)
 
-## Third View
-![Screenshot](images/Google.png)
+## Google News View
+![Screenshot](images/GoogleS.png)
+
+## Detail View 
+![Screenshot](images/DetailSS.png)
