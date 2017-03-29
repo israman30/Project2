@@ -38,7 +38,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="bPy-ub-Dgn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -50,7 +50,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjS-fj-1ta">
                                                     <rect key="frame" x="180" y="66" width="180" height="64"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -60,7 +60,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="5iO-LY-bFo"/>
                                                         <constraint firstAttribute="width" constant="180" id="Ts0-Vs-WFn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                     <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -70,7 +70,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="ip1-ud-JYT"/>
                                                         <constraint firstAttribute="width" constant="180" id="uUf-CO-ybE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                     <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -478,15 +478,15 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-7x-fbi">
                                                     <rect key="frame" x="19" y="0.0" width="150" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-b5-9Lw">
-                                                    <rect key="frame" x="177" y="8" width="190" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-b5-9Lw">
+                                                    <rect key="frame" x="177" y="8" width="190" height="29"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6L-XW-NkW">
-                                                    <rect key="frame" x="177" y="37" width="190" height="76"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6L-XW-NkW">
+                                                    <rect key="frame" x="177" y="45" width="190" height="68"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -496,13 +496,13 @@
                                                         <constraint firstAttribute="width" constant="149" id="aNp-kd-uRs"/>
                                                         <constraint firstAttribute="height" constant="21" id="chJ-zN-lYH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                     <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg1-hw-tOI">
                                                     <rect key="frame" x="177" y="129" width="149" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                     <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -513,10 +513,10 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="fOZ-7x-fbi" secondAttribute="bottom" constant="1" id="3zk-EO-zRw"/>
                                                 <constraint firstItem="Qg1-hw-tOI" firstAttribute="top" secondItem="v6L-XW-NkW" secondAttribute="bottom" constant="16" id="6b9-mA-PA5"/>
                                                 <constraint firstItem="X9S-b5-9Lw" firstAttribute="trailing" secondItem="v6L-XW-NkW" secondAttribute="trailing" id="HqJ-B4-PVu"/>
-                                                <constraint firstItem="fOZ-7x-fbi" firstAttribute="centerY" secondItem="v6L-XW-NkW" secondAttribute="centerY" id="KS7-N5-G8a"/>
+                                                <constraint firstItem="fOZ-7x-fbi" firstAttribute="centerY" secondItem="v6L-XW-NkW" secondAttribute="centerY" constant="-4" id="KS7-N5-G8a"/>
                                                 <constraint firstItem="X9S-b5-9Lw" firstAttribute="trailing" secondItem="5Uv-bN-vpf" secondAttribute="trailingMargin" id="Kst-jf-301"/>
-                                                <constraint firstItem="2MX-Sr-XoK" firstAttribute="top" secondItem="X9S-b5-9Lw" secondAttribute="bottom" constant="81" id="LDN-Rt-gG2"/>
-                                                <constraint firstItem="v6L-XW-NkW" firstAttribute="top" secondItem="X9S-b5-9Lw" secondAttribute="bottom" constant="8" symbolic="YES" id="ORM-xc-pFG"/>
+                                                <constraint firstItem="2MX-Sr-XoK" firstAttribute="top" secondItem="X9S-b5-9Lw" secondAttribute="bottom" constant="73" id="LDN-Rt-gG2"/>
+                                                <constraint firstItem="v6L-XW-NkW" firstAttribute="top" secondItem="X9S-b5-9Lw" secondAttribute="bottom" constant="8" id="ORM-xc-pFG"/>
                                                 <constraint firstItem="v6L-XW-NkW" firstAttribute="leading" secondItem="2MX-Sr-XoK" secondAttribute="leading" id="TBP-yx-vfN"/>
                                                 <constraint firstItem="X9S-b5-9Lw" firstAttribute="leading" secondItem="fOZ-7x-fbi" secondAttribute="trailing" constant="8" symbolic="YES" id="Taj-d6-pcA"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2MX-Sr-XoK" secondAttribute="trailing" constant="41" id="ZX6-0v-tsd"/>
@@ -583,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXb-HE-cPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="885"/>
+            <point key="canvasLocation" x="333.60000000000002" y="884.70764617691157"/>
         </scene>
     </scenes>
     <resources>
@@ -596,6 +596,6 @@
         <image name="whiteCrunch" width="550" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rzf-Gl-MWp"/>
+        <segue reference="VS8-Lk-XW3"/>
     </inferredMetricsTieBreakers>
 </document>
