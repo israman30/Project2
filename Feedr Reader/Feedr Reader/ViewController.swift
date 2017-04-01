@@ -19,6 +19,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var articlesJson = [Articles]()
     
+    var refreshController: UIRefreshControl = UIRefreshControl()
+    var timer: Timer!
+    var isAnimating = false
+    
     @IBOutlet weak var dataTableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dataTableView.dataSource = self
         
         requestAndReloadTableView()
+        refreshControll()
     }
     
     func requestAndReloadTableView() {
@@ -39,9 +44,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-//    @IBAction func topLeftButtonTouchUpInside(_ sender: Any) {
-//        requestAndReloadTableView()
-//    }
+    // MARK: Refresh Controller functions
+    func refreshControll(){
+        refreshController.tintColor = UIColor.white
+        refreshController.backgroundColor = UIColor.green
+        if #available(iOS 10.0, *){
+            dataTableView.refreshControl = refreshController
+        } else {
+            dataTableView.addSubview(refreshController)
+        }
+    }
+    
+    func doSomething() {
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(GoogleViewController.endWork), userInfo: nil, repeats: true)
+    }
+    
+    func endWork(){
+        refreshController.endRefreshing()
+        timer.invalidate()
+        timer = nil
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshController.isRefreshing {
+            if !isAnimating {
+                doSomething()
+            }
+        }
+    }
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,7 +13,13 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var foxArticles = [FoxArticles]()
     
+    var refreshController: UIRefreshControl = UIRefreshControl()
+    var timer: Timer!
+    var isAnimating = false
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +27,7 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         
         requestAndReloadTableView()
+        refreshControll()
 
     }
     
@@ -32,6 +39,36 @@ class FoxSportsViewController: UIViewController, UITableViewDelegate, UITableVie
             self.tableView.reloadData()
         })
     }
+    
+    // MARK: Refresh Controller functions
+    func refreshControll(){
+        refreshController.tintColor = UIColor.white
+        refreshController.backgroundColor = UIColor.blue
+        if #available(iOS 10.0, *){
+            tableView.refreshControl = refreshController
+        } else {
+            tableView.addSubview(refreshController)
+        }
+    }
+    
+    func doSomething() {
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(GoogleViewController.endWork), userInfo: nil, repeats: true)
+    }
+    
+    func endWork(){
+        refreshController.endRefreshing()
+        timer.invalidate()
+        timer = nil
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshController.isRefreshing {
+            if !isAnimating {
+                doSomething()
+            }
+        }
+    }
+
 
     func parseJson(data: Data, completionHandler: @escaping ([FoxArticles]?) -> ()) {
         var newArticles : [FoxArticles] = []

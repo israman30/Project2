@@ -26,7 +26,7 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         
         requestAndReloadTableView()
         
-        resfreshControll()
+        refreshControll()
     }
     
     // MARK: Request and Reload Table View
@@ -41,7 +41,7 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     // MARK: Refresh Controller functions
-    func resfreshControll(){
+    func refreshControll(){
         refreshController.tintColor = UIColor.white
         refreshController.backgroundColor = UIColor.red
         if #available(iOS 10.0, *){
