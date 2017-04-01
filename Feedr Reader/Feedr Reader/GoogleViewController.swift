@@ -37,7 +37,6 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
             self.googlesArticle = arrayArticles!
             self.tableView.reloadData()
         })
-        
     }
     
     // MARK: Refresh Controller functions
