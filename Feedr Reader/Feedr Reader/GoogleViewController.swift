@@ -15,14 +15,21 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
     
     var googlesArticle = [GoogleArticles]()
     
+    var refreshController: UIRefreshControl = UIRefreshControl()
+    var timer: Timer!
+    var isAnimating = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
         requestAndReloadTableView()
+        
+        resfreshControll()
     }
     
+    // MARK: Request and Reload Table View
     func requestAndReloadTableView() {
         googlesArticle = []
         self.tableView.reloadData()
@@ -32,7 +39,37 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         })
         
     }
-
+    
+    // MARK: Refresh Controller functions
+    func resfreshControll(){
+        refreshController.tintColor = UIColor.white
+        refreshController.backgroundColor = UIColor.red
+        if #available(iOS 10.0, *){
+            tableView.refreshControl = refreshController
+        } else {
+            tableView.addSubview(refreshController)
+        }
+    }
+    
+    func doSomething() {
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(GoogleViewController.endWork), userInfo: nil, repeats: true)
+    }
+    
+    func endWork(){
+        refreshController.endRefreshing()
+        timer.invalidate()
+        timer = nil
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshController.isRefreshing {
+            if !isAnimating {
+                doSomething()
+            }
+        }
+    }
+    
+    // MARK: Parse JSON & Fetching functions
     func parseJson(data: Data, completionHandler: @escaping ([GoogleArticles]?) -> ()) {
         var newArticles : [GoogleArticles] = []
         if let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] {
@@ -64,6 +101,7 @@ class GoogleViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
 
+    // MARK: Delegates & Data Sources functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return googlesArticle.count
     }
